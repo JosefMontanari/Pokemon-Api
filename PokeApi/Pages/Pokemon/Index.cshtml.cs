@@ -13,7 +13,7 @@ namespace PokeApi.Pages.Pokemon
         {
             try
             {
-                Root result = await new ApiCaller().MakeCall("pokemon/?limit=100");
+                Root result = await new ApiCaller().MakeCall("https://pokeapi.co/api/v2/pokemon/?limit=100");
                 Pokemons = result.Results;
 
             }

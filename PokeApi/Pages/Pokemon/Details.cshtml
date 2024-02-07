@@ -2,3 +2,13 @@
 @model PokeApi.Pages.Pokemon.DetailsModel
 @{
 }
+
+<h1>@Model.Name</h1>
+<h2>@Model.Height</h2>
+<h2>@Model.Weight</h2>
+<h2>@Model.Id</h2>
+@foreach(var type in Model.Types)
+{
+	<p>@type.Name</p>
+}
+<img src="@Model.Img" />
