@@ -2,3 +2,11 @@
 @model PokeApi.Pages.Pokemon.IndexModel
 @{
 }
+@if (Model.Pokemons != null && Model.Pokemons.Any())
+{
+    @foreach (var pokemon in Model.Pokemons)
+    {
+        <h1>@pokemon.Name</h1>
+        
+    }
+}
