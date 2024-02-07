@@ -1,0 +1,16 @@
+﻿@page
+@model PokeApi.Pages.Pokemon.IndexModel
+@{
+}
+
+@if (Model.Pokemons != null && Model.Pokemons.Any())
+{
+    @foreach (var pokemon in Model.Pokemons)
+    {
+        <a asp-page="/Pokemon/Details" asp-route-id="@pokemon.Url">
+            <h1>@pokemon.Name</h1>
+        </a>
+        <br />
+
+    }
+}
