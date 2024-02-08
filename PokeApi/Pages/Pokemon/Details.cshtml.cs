@@ -59,6 +59,7 @@ namespace PokeApi.Pages.Pokemon
 				Name = pokemonFromApi.Name,
 				Height = pokemonFromApi.Height,
 				Weight = pokemonFromApi.Weight,
+				Url = pokemonFromApi.Sprites.FrontDefault,
 				Type = string.Join(" ", pokemonFromApi.Types.Select(t => t.TypeCore.Name).ToList()),
 
 			};
