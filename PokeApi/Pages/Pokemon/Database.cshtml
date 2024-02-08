@@ -2,3 +2,25 @@
 @model PokeApi.Pages.Pokemon.DatabaseModel
 @{
 }
+
+
+<h1>Pokemom from Database</h1>
+
+@if(Model.Pokemons !=null && Model.Pokemons.Any())
+{
+	@foreach(var pokemon in Model.Pokemons)
+	{
+		<h4>@pokemon.Name</h4>
+
+		<h4>@pokemon.Type</h4>
+
+		<h4>@pokemon.Height</h4>
+
+		<h4>@pokemon.Weight</h4>	
+	}
+
+}
+else
+{
+	<h4>No pokemon found in the database</h4>
+}
